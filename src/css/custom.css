@@ -1,0 +1,203 @@
+@font-face
+{
+	font-family: OpenSans;
+	src: url(../assets/fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+@font-face
+{
+	font-family: Roboto;
+	src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Open Sans', sans-serif;
+    color: #4b0073;
+}
+
+p
+{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+.main-contents
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* CARD ------------------------------------------------------------------------ */
+
+.card
+{
+    border: 10px solid #4b0073;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #7c1fa3;
+}
+
+/* Image */
+.card .img-thumbnail
+{
+    border: 0px;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+/* Heading */
+.card h3
+{
+    color:white;
+}
+
+/* Description */
+.card p
+{
+    color:black;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* HEADER ---------------------------------------------------------------------- */
+
+/* Default Font Colour */
+.navbar-main a
+{
+     color: white;
+}
+
+/* Background Colour */
+.navbar-main
+{
+    background-color: #4b0073;
+    min-height: 70px;
+}
+
+ /* Hover Colour */
+.navbar-main .navbar-nav > li > a:hover, 
+.navbar-main .navbar-nav > li > a:focus
+{
+     color: #af52d5;  
+}
+
+ /* Active Tab Colour, Active Tab BG Colour */
+.navbar-main .navbar-nav .nav-item > .active, 
+.navbar-main .navbar-nav > .active > a:hover, 
+.navbar-main .navbar-nav > .active > a:focus
+{
+    color:  black;
+    background-color: #ffc107;
+}
+
+/* Hamburger Menu */
+.navbar-main .navbar-toggler
+{
+    border-radius: 0px;
+    border-color: white;
+    outline: none !important;
+}
+
+/* Icon */
+.navbar-main .navbar-toggler-icon
+{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Dropdown Menu */
+.dropdown-menu
+{
+    background-color: #4b0073;
+    margin-top: 0px; /* Experiment to move the dropdown menu down */
+}
+
+/* Dropdown Font Colour */
+.dropdown-menu .dropdown-item
+{
+    color: white;
+}
+
+/* Dropdown Hover Colour */
+.dropdown-menu .dropdown-item:hover
+{
+    background-color: #7c1fa3;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* Footer ---------------------------------------------------------------------- */
+ 
+/* Background Colour and Height */
+.footer
+{
+    background-color: #4b0073;
+}
+
+/* Text Colour */
+.footer p
+{
+    color: white;
+}
+
+/* Copyright Text Padding */
+.copyright
+{
+    padding-top: 25px;
+}
+
+/* Social Icons Hover Colour */
+.social, .social i:hover
+{
+    padding-top: 0px;
+    color:#ffc107 !important;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px)
+{
+    .footer
+    {
+        height: 50px;
+    }
+
+    .copyright
+    {
+        padding-top: 25px;
+    }
+
+    .social
+    {
+        padding-top: 10px;
+    }
+
+    .dropdown-menu
+    {
+        background-color: #4b0073;
+        margin-top: 20px; /* Experiment to move the dropdown menu down */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px)
+{
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px)
+{
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)
+{
+
+}
