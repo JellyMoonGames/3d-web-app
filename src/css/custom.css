@@ -1,3 +1,5 @@
+/* FONTS ----------------------------------------------------------------------- */
+
 @font-face
 {
 	font-family: OpenSans;
@@ -10,6 +12,21 @@
 	src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
 }
 
+/* GENERAL --------------------------------------------------------------------- */
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
 h1,h2,h3,h4,h5,h6
 {
     font-family: 'Open Sans', sans-serif;
@@ -20,12 +37,6 @@ p
 {
     font-family: 'Roboto', sans-serif;
     color: black;
-}
-
-.main-contents
-{
-    margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 /* CARD ------------------------------------------------------------------------ */
@@ -47,7 +58,7 @@ p
 }
 
 /* Heading */
-.card h3
+.card h1,h2,h3,h4,h5
 {
     color:white;
 }
@@ -57,8 +68,6 @@ p
 {
     color:black;
 }
-
-/* ----------------------------------------------------------------------------- */
 
 /* HEADER ---------------------------------------------------------------------- */
 
@@ -118,86 +127,128 @@ p
     color: white;
 }
 
+.dropdown-menu .active
+{
+    color: black;
+    background-color: #ffc107;
+}
+
 /* Dropdown Hover Colour */
-.dropdown-menu .dropdown-item:hover
+.dropdown-item:hover:not(.active)
 {
     background-color: #7c1fa3;
 }
 
-/* ----------------------------------------------------------------------------- */
+/* MAIN ------------------------------------------------------------------------ */
 
-/* Footer ---------------------------------------------------------------------- */
+.main-contents
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.model3D
+{
+    background-color: rgba(97, 24, 24, 0.0);
+    border-radius: 0px;
+    border: 0px solid rgba(0, 0, 0, 1.0);
+    padding: 0px;
+    height: 400px;
+}
+
+
+
+X3D, x3d
+{
+    position:relative;
+    float:left;
+    cursor: pointer;
+    
+    border-radius: 0px;
+    /*border: 1px solid rgba(255, 255, 255, 1.0);*/
+    width: 100%;
+    height: 100%
+}
+
+/* Gallery Title */
+.gallery-title, .gallery-title h5
+{
+    margin: 2px;
+    padding:0;
+}
+
+/* FOOTER ---------------------------------------------------------------------- */
  
-/* Background Colour and Height */
+/* Background Colour, Height */
 .footer
 {
     background-color: #4b0073;
+    margin-top: auto;
 }
 
 /* Text Colour */
 .footer p
 {
     color: white;
+    height: 100%;
+    margin:0;
 }
 
 /* Copyright Text Padding */
 .copyright
 {
-    padding-top: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-/* Social Icons Hover Colour */
+/* Social Icons Padding, Hover Colour */
 .social, .social i:hover
 {
     padding-top: 0px;
+    padding-bottom: 0px;
     color:#ffc107 !important;
 }
 
-/* ----------------------------------------------------------------------------- */
-
-/* Extra small devices (portrait phones, less than 576px)
-   No media query since this is the default in Bootstrap
-*/
+/* MEDIA QUERIES --------------------------------------------------------------- */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px)
 {
-    .footer
-    {
-        height: 50px;
-    }
-
-    .copyright
-    {
-        padding-top: 25px;
-    }
-
-    .social
-    {
-        padding-top: 10px;
-    }
-
     .dropdown-menu
     {
         background-color: #4b0073;
         margin-top: 20px; /* Experiment to move the dropdown menu down */
+    }
+
+    .model3D
+    {
+        height: 323px;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px)
 {
-
+    .model3D
+    {
+        height: 434px;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px)
 {
-
+    .model3D
+    {
+        height: 565px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px)
 {
-
+    .model3D
+    {
+        height: 701px;
+    }
 }

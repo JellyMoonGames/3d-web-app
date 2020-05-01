@@ -1,0 +1,247 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        
+        <!-- Required Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>3D Wep App</title>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Custom CSS Styles -->
+        <link rel="stylesheet" href="css/custom.css">
+        
+        <!-- Font Awesome JS -->
+        <script src="https://kit.fontawesome.com/d8e9c5bb34.js" crossorigin="anonymous"></script>
+
+        <!-- X3DOM CSS + JS -->
+        <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/x3dom/release/x3dom.css'></link>
+        <script type='text/javascript' src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+        
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar sticky-top navbar-expand-sm navbar-main">
+
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="index.html">3D SHOWCASE</a>
+
+                <!-- Collapse Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <ul class="navbar-nav">
+
+                        <!-- Home Button -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">3D Models</a>
+                            
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item active" href="#">Model 1</a>
+                                <a class="dropdown-item" href="#">Model 2</a>
+                                <a class="dropdown-item" href="#">Model 3</a>
+                                <a class="dropdown-item" href="#">Model 4</a>
+                            </div>
+                            
+                        </li>
+
+                        <!-- About Button -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- Main Contents -->
+        <div class="container main-contents">
+
+            <h1>Model 1</h1>
+            <p>This is the 3D viewer for model 1</p>
+            
+            <!-- Row 1 -->
+            <div class="row">
+
+                <!-- Column 1 -->
+                <div class="col-sm-9">
+
+                    <!-- 3D Viewer Card -->
+                    <div class="card">
+
+                        <!-- 3D Contents -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline url="assets/x3d/model_1.x3d"></inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                        
+                        <!-- Card Body -->
+                        <div class="card-body">
+
+                            <!-- 3D Interaction Button Row -->
+                            <div class="row">
+
+                                <!-- Camera View Button Column -->
+                                <div class="col-sm-4">
+                                    <div class="camera-controls">
+        
+                                        <h3 class="card-title">Camera View</h3>
+        
+                                        <div class="btn-group">
+                                            <a class="btn btn-responsive btn-warning" href="#">Front</a>
+                                            <a class="btn btn-responsive btn-warning" href="#">Back</a>
+                                            <a class="btn btn-responsive btn-warning" href="#">Left</a>
+                                            <a class="btn btn-responsive btn-warning" href="#">Right</a>
+                                        </div>
+        
+                                    </div>
+                                </div>
+
+                                <!-- Animation Button Column -->
+                                <div class="col-sm-4">
+                                    <div class="camera-controls">
+        
+                                        <h3 class="card-title">Animations</h3>
+        
+                                        <div class="btn-group">
+                                            <a class="btn btn-responsive btn-warning" href="#">Anim-1</a>
+                                            <a class="btn btn-responsive btn-warning" href="#">Anim-2</a>
+                                            <a class="btn btn-responsive btn-warning" href="#">Anim-3</a>
+                                        </div>
+        
+                                    </div>
+                                </div>
+    
+                                <!-- Lights Button Column -->
+                                <div class="col-sm-4">
+                                    <div class="camera-controls">
+        
+                                        <h3 class="card-title">Lights</h3>
+        
+                                        <div class="btn-group">
+                                            <a class="btn btn-responsive btn-warning" href="#">On</a>
+                                            <a class="btn btn-responsive btn-warning" href="#">Off</a>
+                                        </div>
+        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-sm-3">
+
+                    <!-- Image Gallery Card -->
+                    <div class="card text-center">
+
+                        <!-- Header -->
+                        <div class="card-title gallery-title">
+                            <h5>3D Image Gallery</h5>
+                        </div>
+
+                        <!-- Images -->
+                        <a href="model_1.html">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/image_1.jpg" alt="Model 1">
+                        </a>
+                        <a href="model_2.html">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/image_2.jpg" alt="Model 2">
+                        </a>
+                        <a href="model_3.html">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/image_3.jpg" alt="Model 3">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+
+                <!-- Column 1 -->
+                <div class="col-sm-12">
+
+                    <!-- Model Description Card -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Model 1</h3>
+                            <p class="card-text">
+                                This is a description for model 1 which is where all the text will go.
+                            </p>
+                            <a href="#" class="btn btn-primary">Find out more...</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <nav class="navbar navbar-expand-sm footer">
+
+            <div class="container">
+
+                <!-- Copyright -->
+                <div class="navbar-text float-left copyright">
+                    <p><span class="align-baseline">&copy 2020 3D Web Applications</span></p>
+                </div>
+
+                <!-- Icons -->
+                <div class="navbar-text float-right social">
+                    <a href="#"><i class="fab fa-facebook-square fa-2x" style="font-size:20px;color:white;"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x" style="font-size:20px;color:white;"></i></a>
+                    <a href="#"><i class="fab fa-google-plus fa-2x" style="font-size:20px;color:white;"></i></a>
+                    <a href="#"><i class="fab fa-github-square fa-2x" style="font-size:20px;color:white;"></i></a>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- JQuery, Popper.js and Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+    </body>
+
+</html>
