@@ -14,8 +14,6 @@ $(document).ready(function()
     {
         if(xmlHTTP.readyState == 4)
         {
-            alert(xmlHTTP.responseText);
-
             response = xmlHTTP.responseText.split("~");
             htmlCode += '<tr>';
 
