@@ -1,7 +1,3 @@
-<head>
-</head>
-
-<body>
 <?php
     $directory = '../assets/images';
     $allowed_extensions = array('jpg', 'jpeg', "gif", "png");
@@ -26,4 +22,3 @@
     closedir($dir_handle);
     echo substr_replace($response, "", -1);
 ?>
-</body>
