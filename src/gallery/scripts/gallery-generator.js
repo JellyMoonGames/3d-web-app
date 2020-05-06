@@ -1,5 +1,4 @@
 var xmlHTTP = new XMLHttpRequest();
-var numberOfColumns = 4;
 var htmlCode = "";
 var response;
 
@@ -16,30 +15,31 @@ $(document).ready(function()
         {
             response = xmlHTTP.responseText.split("~");
 
+            htmlCode += '<div class="row">';
+
             // For each image add this HMTL code:
             for(var i=0; i<response.length; i++)
             {
-                htmlCode += '<div class="container>'
+                htmlCode += '<div class="col-sm-4">';
+                htmlCode += '<div class="card">';
+                htmlCode += '<div class="content">';
 
-                //#region Image
+                //#region Image + OVerlay
 
-                // Image Link
-                htmlCode += '<a href="assets/images/' + response[i] +' ">';
-                
-                // Image
-                htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/' + response[i] + '"/>';
-
-                //Overlay
-                htmlCode += '<div class="overlay">'
-                htmlCode += '<div class="text">Hello World</div>';
-                htmlCode += '</div>'
-
-                htmlCode += '</a>';
+                htmlCode += '<img class="card-img-top" src="assets/images/' + response[i] + '"/>';
+                htmlCode += '<div class="overlay">';
+                htmlCode += '<h2>3D Model Name</h2>';
+                htmlCode += '<a class="info" data-toggle="modal" id="view-button" href="#main-modal">View Model</a>';
+                htmlCode += '</div>';
 
                 //#endregion
 
                 htmlCode += '</div>';
+                htmlCode += '</div>';
+                htmlCode += '</div>';
             }
+
+            htmlCode += '</div>';
 
             document.getElementById('gallery').innerHTML = htmlCode;
         }

@@ -1,0 +1,121 @@
+/* #region Fonts ----------------------------------------------------------------------- */
+
+/* Header */
+@font-face
+{
+	font-family: Oswald;
+	src: url(../assets/fonts/oswald/Oswald-Bold.ttf);
+}
+
+/* Main Text */
+@font-face
+{
+	font-family: OpenSans;
+	src: url(../assets/fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+/* #endregion */
+
+/* #region Rows ------------------------------------------------------------------------ */
+
+#row-3d
+{
+	margin: 0;
+	padding: 0;
+	background-color: #424242;
+}
+
+#row-interaction
+{
+	margin: 0;
+	padding: 0px;
+	background-color: #6d6d6d;
+}
+
+#row-description
+{
+	margin: 0;
+	padding: 10px;
+    background-color: #424242;
+    color: white;
+}
+
+/* #endregion */
+
+/* #region Header ---------------------------------------------------------------------- */
+
+.modal-header
+{
+	border: 0;
+	border-radius: 0px;
+	padding: 10px;
+    
+	background-color: #fb8c00;
+	font-family: 'Oswald', sans-serif;;
+	text-transform: uppercase;
+}
+
+.modal-header h4
+{
+	margin: 0;
+}
+
+.modal-header .close
+{
+	outline: none !important;
+}
+
+/* #endregion */
+
+/* #region 3D -------------------------------------------------------------------------- */
+
+.modal-body, .modal-body .col-sm-4, .modal-body .col-sm-6, .modal-body .col-sm-12
+{
+	padding: 0;
+}
+
+#row-3d .model3D
+{
+	width: 100%;
+	height: 100%;
+}
+
+/* #endregion */
+
+/* #region Interaction ----------------------------------------------------------------- */
+
+#row-interaction h5
+{
+    margin: 0px;
+    margin-bottom: 3px;
+    
+	color: white;
+	font-size: 1rem;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+#row-interaction .camera-controls
+{
+	position: relative;
+	margin: 10px;
+}
+
+#row-interaction .camera-controls .btn
+{
+    margin-right: 5px;
+    border-radius: 0;
+}
+
+/* #endregion */
+
+/* #region Description ----------------------------------------------------------------- */
+
+#row-description p
+{
+	margin: 0;
+
+	font-family: 'OpenSans', sans-serif;
+}
+
+/* #endregion */

@@ -1,65 +1,153 @@
-.gallery
+#gallery-card
+{
+	width: auto;
+	height: auto;
+	margin: 10px;
+
+	border-radius: 0;
+	border: 2px solid black;
+}
+
+#gallery-header
+{
+	border-radius: 0;
+	text-transform: uppercase;
+	background-color: #fb8c00;
+}
+
+#gallery-body
+{
+	background-color: lightgrey;
+}
+
+/* Gallery Model Cards */
+.card
+{
+	width: auto;
+	height: auto;
+	margin: 10px;
+
+	border-radius: 0;
+	border: 2px solid black;
+}
+
+/* Card Main Contents */
+.content
 {
     width: auto;
-    height: auto;
-}
-
-.img-thumbnail
-{
-    padding: 0rem;
-    margin-top:0px;
-    margin-bottom:0px;
-    
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 0;
-    
-    max-width: 100%;
-    
-}
-
-.gallery .img-thumbnail
-{
-    background-color: white;
-    border:0;
-    border-radius: 0;
-    max-width: 100%;
-}
-
-.container
-{
+	height: auto;
     position: relative;
-    width: 50%;
-}
-
-.container:hover .overlay
-{
-    opacity: 0.5;
-}
-
-.overlay
-{    
-    padding: 0rem;
-    margin-top:0px;
-    margin-bottom:0px;
-    
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 0;
-    
-    max-width: 100%;
-
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-}
-
-.text
-{
-    color: white;
-    font-size: 20px;
-    -webkit-transform: translate(0%, -100%);
-    -ms-transform: translate(0%, -100%);
-    transform: translate(0%, -100%);
+	
+    float: left;
+    overflow: hidden;
     text-align: center;
+    cursor: default;
 }
+
+/* Card Image */
+.content .card-img-top
+{
+	width: 100%;
+	height: auto;
+
+	border-radius: 0;
+	position: relative;
+
+	/* Transition */
+	-webkit-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+}
+
+/* #region Overlay --------------------------------------------------------------------- */
+
+/* Overlay Element */
+.content .overlay
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+/* Image Hover Effects */
+.content:hover img, .content:active img
+{
+	/* Grayscale + Blur */
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+	filter: grayscale(0.3) blur(3px);
+	-webkit-filter: grayscale(0.3) blur(3px);
+
+	/* Scale */
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/* Model Name Header */
+.content h2
+{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 17px;
+	position: relative;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	background: rgba(0, 0, 0, 0.6);
+}
+
+/* View Model Button */
+.content a.info
+{
+	display: inline-block;
+	text-decoration: none;
+	padding: 7px 14px;
+	border: 1px solid #fff;
+	margin: 50px 0 0 0;
+	background-color: transparent;
+}
+
+/* View Model Button Hover */
+.content a.info:hover
+{
+	color: lightgrey;
+	box-shadow: 0 0 10px #fb8c00;
+}
+
+/* View Model Button + Model Name Header */
+.content a.info, .content h2
+{
+	color: #fff;
+
+	opacity: 0;
+	filter: alpha(opacity=0);
+	text-transform: uppercase;
+
+	/* Transition */
+	-webkit-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+
+	/* Scale */
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+/* View Model Button + Model Name Header */
+.content:hover a.info, .content:hover h2
+{
+	opacity: 1;
+	filter: alpha(opacity=100);
+
+	/* Scale */
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+/* #endregion */
