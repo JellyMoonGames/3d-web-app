@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Hover Effect Style</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/overlay.css">
+        <!-- X3DOM CSS + JS -->
+        <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/x3dom/release/x3dom.css'></link>
+        <script type='text/javascript' src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            
+            <div class="row">
+            
+                <!-- Gallery Card -->
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="assets/images/image_1.jpg" alt="">
+                            <div class="overlay">
+                                <h2>3D Model Name</h2>
+                                <a class="info" data-toggle="modal" id="view-button" href="#main-modal">View Model</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="assets/images/image_1.jpg" alt="">
+                            <div class="overlay">
+                                <h2>3D Model Name</h2>
+                                <a class="info" data-toggle="modal" id="view-button" href="#main-modal">View Model</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="assets/images/image_1.jpg" alt="">
+                            <div class="overlay">
+                                <h2>3D Model Name</h2>
+                                <a class="info" data-toggle="modal" id="view-button" href="#main-modal">View Model</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="content">
+                            <img class="card-img-top" src="assets/images/image_1.jpg" alt="">
+                            <div class="overlay">
+                                <h2>3D Model Name</h2>
+                                <a class="info" data-toggle="modal" id="view-button" href="#main-modal">View Model</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 3D Model Modal Popup -->
+            <div class="modal fade" id="main-modal" role="dialog">
+                
+                <div class="modal-dialog">
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            $(document).ready(function(){
+              $("#view-button").click(function(){
+                $("#main-modal").modal();
+              });
+            });
+        </script>
+
+    </body>
+
+</html>

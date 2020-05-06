@@ -15,25 +15,32 @@ $(document).ready(function()
         if(xmlHTTP.readyState == 4)
         {
             response = xmlHTTP.responseText.split("~");
-            htmlCode += '<tr>';
 
+            // For each image add this HMTL code:
             for(var i=0; i<response.length; i++)
             {
-                htmlCode += '<td id="gallery-cell">';
+                htmlCode += '<div class="container>'
 
-                htmlCode += '<a href="' + 'images/' + response[i] +'">';
+                //#region Image
+
+                // Image Link
+                htmlCode += '<a href="assets/images/' + response[i] +' ">';
                 
-                htmlCode += '<img src="images/' + response[i] + '" id="image-thumbnail"/>';
-                htmlCode += '</a>';
-                htmlCode += '</td>';
+                // Image
+                htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/' + response[i] + '"/>';
 
-                if(((i+1)%numberOfColumns) == 0)
-                {
-                    htmlCode += '</tr><tr>';
-                }
+                //Overlay
+                htmlCode += '<div class="overlay">'
+                htmlCode += '<div class="text">Hello World</div>';
+                htmlCode += '</div>'
+
+                htmlCode += '</a>';
+
+                //#endregion
+
+                htmlCode += '</div>';
             }
 
-            htmlCode += '</tr>';
             document.getElementById('gallery').innerHTML = htmlCode;
         }
     }

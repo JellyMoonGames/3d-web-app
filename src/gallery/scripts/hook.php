@@ -14,7 +14,7 @@
 
             if(in_array($extension, $allowed_extensions))
             {
-                $response .= $directory.'/'.$file.'~';
+                $response .= $file.'~';
             }
         }
     }

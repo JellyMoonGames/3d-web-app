@@ -7,14 +7,40 @@
         <meta charset="UTF-8">
         <title>Gallery Test</title>
 
-        <link rel="stylesheet" type="text/css" href="css/gallery.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/gallery-generator.js"></script>
+        <!-- CSS -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/overlay.css">
+        
+        <!-- JS -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/gallery-generator-overlay.js"></script>
 
     </head>
 
     <body>
-        <table id="gallery"></table>
+        <div class="container">
+
+            <!-- Gallery Card -->
+            <div class="card text-left">
+    
+                <!-- Card Header -->
+                <div class="card-header gallery-header">
+                    Gallery
+                </div>
+    
+                <!-- Card Body -->
+                <div class="card-body">
+        
+                    <!-- Dynamic Gallery -->
+                    <div class="gallery" id="gallery"></div>
+        
+                </div>
+    
+            </div>
+
+        </div>
     </body>
 
 </html>
