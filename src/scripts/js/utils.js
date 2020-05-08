@@ -1,10 +1,10 @@
 // Utilities
 
 // Swap to the requested element block and hide all others
-function swap(selected)
+function changePage(page)
 {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("model").style.display = "none";
+    $('#home').hide();
+    $('#model').hide();
 
-    document.getElementById(selected).style.display = "block";
+    $('#' + page).show();
 }
