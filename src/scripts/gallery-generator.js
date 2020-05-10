@@ -1,34 +1,37 @@
-var xmlHTTP = new XMLHttpRequest();
+var ajax = new XMLHttpRequest();
 var htmlCode = "";
 var response;
 
 $(document).ready(function()
 {
     var send = "scripts/hook.php";
-    xmlHTTP.open("GET", send, true);
+    ajax.open("GET", send, true);
 
-    xmlHTTP.send(null);
+    ajax.send(null);
 
-    xmlHTTP.onreadystatechange = function()
+    ajax.onreadystatechange = function()
     {
-        if(xmlHTTP.readyState == 4)
+        if(ajax.readyState == 4)
         {
-            response = xmlHTTP.responseText.split("~");
+            response = ajax.responseText.split("~");
 
             htmlCode += '<div class="row">';
 
             // For each image add this HMTL code:
             for(var i=0; i<response.length; i++)
             {
+                // TO-DO: Get Model name from database
+                
+                
                 htmlCode += '<div class="col-sm-4">';
-                htmlCode += '<div class="card">';
+                htmlCode += '<div class="gallery-card card">';
                 htmlCode += '<div class="content">';
 
-                //#region Image + OVerlay
+                //#region Image + Overlay
 
-                htmlCode += '<img class="card-img-top" src="assets/images/' + response[i] + '"/>';
+                htmlCode += '<img class="card-img-top" src="assets/images/gallery/' + response[i] + '"/>';
                 htmlCode += '<div class="overlay">';
-                htmlCode += '<h2>3D Model Name</h2>';
+                htmlCode += '<h2>' + '<?php echo data[' + i + ']["modelTitle"] ?>' + '</h2>';
                 htmlCode += '<a class="info" data-toggle="modal" id="view-button" href="#main-modal">View Model</a>';
                 htmlCode += '</div>';
 

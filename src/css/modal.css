@@ -40,6 +40,19 @@
     color: white;
 }
 
+#row-image-gallery
+{
+	margin: 0px;
+	padding: 5px;
+	background-color: #6d6d6d;
+}
+
+#row-image-gallery .img-fluid
+{
+	padding: 0px;
+	border: 1px solid orange;
+}
+
 /* #endregion */
 
 /* #region Header ---------------------------------------------------------------------- */

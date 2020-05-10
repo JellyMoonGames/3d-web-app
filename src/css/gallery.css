@@ -1,4 +1,4 @@
-#gallery-card
+#gallery-master-card
 {
 	width: auto;
 	height: auto;
@@ -21,7 +21,7 @@
 }
 
 /* Gallery Model Cards */
-.card
+gallery-card .card
 {
 	width: auto;
 	height: auto;

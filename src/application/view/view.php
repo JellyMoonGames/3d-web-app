@@ -1,8 +1,8 @@
 <?php
 
-class Load
+class View
 {
-    function view($file_name, $data = null)
+    function load($file_name, $data = null)
     {
         // Check for data
         if(is_array($data))
