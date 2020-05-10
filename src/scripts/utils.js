@@ -44,5 +44,7 @@ function updateModal(id)
         
         $('#row-image-gallery').html(imageHTML);
 
+        // TO-DO: Change the X3D model and integrate the interaction buttons
+
     }
 }

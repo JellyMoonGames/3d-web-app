@@ -5,7 +5,7 @@
 	margin: 10px;
 
 	border-radius: 0;
-	border: 2px solid black;
+	border: 5px solid #0f0f0f;
 }
 
 #gallery-header
@@ -17,18 +17,18 @@
 
 #gallery-body
 {
-	background-color: lightgrey;
+	background-color: #424242;
 }
 
 /* Gallery Model Cards */
-gallery-card .card
+.gallery-card .card
 {
 	width: auto;
 	height: auto;
 	margin: 10px;
 
 	border-radius: 0;
-	border: 2px solid black;
+	border: 2px solid #0f0f0f;
 }
 
 /* Card Main Contents */

@@ -22,6 +22,7 @@ html
 body
 {
     min-height: 100%;
+    background-color: #212121;
 
     display: flex;
     flex-direction: column;
@@ -29,22 +30,22 @@ body
 
 h1,h2,h3,h4,h5,h6
 {
-    font-family: 'Open Sans', sans-serif;
-    color: #4b0073;
+    font-family: 'Oswald', sans-serif;
+    color: #fb8c00;
 }
 
 p
 {
-    font-family: 'Roboto', sans-serif;
-    color: black;
+    font-family: 'OpenSans', sans-serif;
+    color: white;
 }
 
 .carousel
 {
-    border: 10px solid #4b0073;
+    border: 5px solid #0f0f0f;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #7c1fa3;
+    background-color: #424242;
 }
 
 .carousel-inner img
@@ -57,10 +58,11 @@ p
 
 .card
 {
-    border: 10px solid #4b0073;
+    border-radius: 0;
+    border: 5px solid #0f0f0f;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #7c1fa3;
+    background-color: #424242;
 }
 
 /* Image */
@@ -74,16 +76,21 @@ p
 /* Heading */
 .card h1,h2,h3,h4,h5
 {
-    color:white;
+    color:#fb8c00;
 }
 
 /* Description */
 .card p
 {
-    color:black;
+    color:white;
 }
 
 /* HEADER ---------------------------------------------------------------------- */
+
+.navbar-brand
+{
+    font-family: 'Oswald', sans-serif;
+}
 
 /* Default Font Colour */
 .navbar-main a
@@ -94,7 +101,7 @@ p
 /* Background Colour */
 .navbar-main
 {
-    background-color: #4b0073;
+    background-color: #0f0f0f;
     min-height: 70px;
 }
 
@@ -102,7 +109,7 @@ p
 .navbar-main .navbar-nav > li > a:hover, 
 .navbar-main .navbar-nav > li > a:focus
 {
-     color: #af52d5;  
+     color: #fb8c00;
 }
 
  /* Active Tab Colour, Active Tab BG Colour */
@@ -111,7 +118,7 @@ p
 .navbar-main .navbar-nav > .active > a:focus
 {
     color:  black;
-    background-color: #ffc107;
+    background-color: #fb8c00;
 }
 
 /* Hamburger Menu */
@@ -131,8 +138,8 @@ p
 /* Dropdown Menu */
 .dropdown-menu
 {
-    background-color: #4b0073;
-    margin-top: 0px; /* Experiment to move the dropdown menu down */
+    background-color: #212121;
+    margin-top: 0px; /* Experiment to move the dropdown menu down */ 
 }
 
 /* Dropdown Font Colour */
@@ -143,14 +150,15 @@ p
 
 .dropdown-menu .active
 {
-    color: black;
-    background-color: #ffc107;
+    color: #0f0f0f;
+    background-color: #fb8c00;
 }
 
 /* Dropdown Hover Colour */
 .dropdown-item:hover:not(.active)
 {
-    background-color: #7c1fa3;
+    color: #0f0f0f;
+    background-color: #fb8c00;
 }
 
 /* MAIN ------------------------------------------------------------------------ */
@@ -196,7 +204,7 @@ X3D, x3d
 /* Background Colour, Height */
 .footer
 {
-    background-color: #4b0073;
+    background-color: #0f0f0f;
     margin-top: auto;
 }
 
@@ -220,7 +228,7 @@ X3D, x3d
 {
     padding-top: 0px;
     padding-bottom: 0px;
-    color:#ffc107 !important;
+    color:#fb8c00 !important;
 }
 
 /* MEDIA QUERIES --------------------------------------------------------------- */
@@ -230,7 +238,7 @@ X3D, x3d
 {
     .dropdown-menu
     {
-        background-color: #4b0073;
+        background-color: #0f0f0f;
         margin-top: 20px; /* Experiment to move the dropdown menu down */
     }
 
