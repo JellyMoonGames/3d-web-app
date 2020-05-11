@@ -26,12 +26,12 @@ function updateModal(id)
             console.log(data);
         }
 
-        // Assign the model data to the modal pop-up
+        // Modal Header + Description
         $('#modalHeader').html(data[0]['modelTitle']);
         $('#modalDescription').html(data[0]['modelDescription']);
         
         
-        // TO-DO: Get images for each model and display them by getting the path from the database
+        // Model Image Gallery
         var imagePaths = ["1.jpg", "2.jpg", "3.jpg"];
         var imageHTML = "";
 
@@ -44,7 +44,11 @@ function updateModal(id)
         
         $('#row-image-gallery').html(imageHTML);
 
+        // Model Loading
+        $("x3d > scene > inline").attr("url", "assets/x3d/" + data[0]['x3dModelTitle']);
+        $("x3d > scene > inline").attr("mapDEFToID", true);
+        $("x3d > scene > inline").attr("nameSpaceName", "model");
+        
         // TO-DO: Change the X3D model and integrate the interaction buttons
-
     }
 }

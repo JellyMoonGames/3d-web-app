@@ -131,6 +131,8 @@
 {
 	margin: 0;
 
+	text-align: justify;
+	text-justify: inter-word;
 	font-family: 'OpenSans', sans-serif;
 }
 

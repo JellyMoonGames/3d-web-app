@@ -253,7 +253,7 @@
                             <div class="model3D">
                                 <x3d>
                                     <scene>
-                                        <inline url="assets/x3d/ruin.x3d"></inline>
+                                        <inline></inline>
                                     </scene>
                                 </x3d>
                             </div>
