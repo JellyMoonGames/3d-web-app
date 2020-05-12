@@ -47,26 +47,17 @@
 
                         <!-- Home Button -->
                         <li class="nav-item">
-                            <a class="nav-link active" href="javascript:changePage('home')">Home</a>
-                        </li>
-                        
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">3D Models</a>
-                            
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="javascript:changePage('model')">Model 1</a>
-                                <a class="dropdown-item" href="#">Model 2</a>
-                                <a class="dropdown-item" href="#">Model 3</a>
-                                <a class="dropdown-item" href="#">Model 4</a>
-                            </div>
-                            
+                            <a id="nav-home" class="nav-link active" href="javascript:changePage('home')">Home</a>
                         </li>
 
-                        <!-- About Button -->
+                        <!-- Showcase Button -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a id="nav-showcase" class="nav-link" href="javascript:changePage('showcase')">Showcase</a>
+                        </li>
+
+                        <!-- Deeper Understanding Button -->
+                        <li class="nav-item">
+                            <a id="nav-understanding" class="nav-link" href="javascript:changePage('understanding')">Deeper Understanding</a>
                         </li>
                         
                     </ul>
@@ -132,12 +123,12 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <a href="#">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery/1.jpg" alt="Image 1">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Coca-Cola Can/3.jpg" alt="Image 1">
                         </a>
                         <div class="card-body">
-                            <h3 class="card-title">Model 1</h3>
-                            <p class="card-text">This is the description text for model 1.</p>
-                            <a class="btn btn-warning" href="#">View Model</a>
+                            <h3 class="card-title">Showcase</h3>
+                            <p class="card-text">This is the interactable 3D model showcase.</p>
+                            <a class="btn btn-warning" href="javascript:changePage('showcase')">View Page</a>
                         </div>
                     </div>
                 </div>
@@ -146,12 +137,12 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <a href="#">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery/2.jpg" alt="Image 2">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/blender-logo.jpg" alt="Image 2">
                         </a>
                         <div class="card-body">
-                            <h3 class="card-title">Model 2</h3>
-                            <p class="card-text">This is the description text for model 2.</p>
-                            <a class="btn btn-warning" href="#">View Model</a>
+                            <h3 class="card-title">Deeper Understanding</h3>
+                            <p class="card-text">This section goes into detail of the extra functionality that I added.</p>
+                            <a class="btn btn-warning" href="javascript:changePage('understanding')">View Page</a>
                         </div>
                     </div>
                 </div>
@@ -175,10 +166,10 @@
         </div>
 
         <!-- Gallery Element -->
-        <div id="model" class="container main-contents" style="display:none">
+        <div id="showcase" class="container main-contents" style="display:none">
 
-            <h1>Model Gallery</h1>
-            <p>This is a collection of all my 3D models.</p>
+            <h1>3D Model Showcase</h1>
+            <p>This is a showcase of all my interactable, 3D models.</p>
             
             <!-- Row 1 -->
             <div class="row">
@@ -200,19 +191,22 @@
                             <?php for ($i=0; $i < count($data); $i++){ ?>
                             
                                 <div class="col-sm-4">
+
                                     <div class="gallery-card card">
-                                        
+
                                         <div class="content">
 
-                                        <img class="card-img-top" src="<?php echo 'assets/images/gallery/' . strval($i+1) . '.jpg'?>"/>
-                                        
-                                        <div class="overlay">
-                                            <h2><?php echo $data[$i]['modelTitle'] ?></h2>
-                                            <a class="info" data-toggle="modal" id="view-button" href="#main-modal" onclick="<?php echo 'updateModal(' . strval($i+1) . ')' ?>">View Model</a>
-                                        </div>
+                                            <img class="card-img-top" src="<?php echo 'assets/images/' . $data[$i]['modelTitle'] . '/' . '3.jpg'?>"/>
+                                            
+                                            <div class="overlay">
+                                                <h2><?php echo $data[$i]['modelTitle'] ?></h2>
+                                                <a class="info" data-toggle="modal" id="view-button" href="#main-modal" onclick="<?php echo 'updateModal(' . strval($i+1) . ')' ?>">View Model</a>
+                                            </div>
 
                                         </div>
+
                                     </div>
+                                    
                                 </div>
 
                             <?php } ?>
@@ -224,6 +218,26 @@
                 </div>
 
             </div>
+
+        </div>
+
+        <!-- Deeper Understanding Block Element-->
+        <div id="understanding" class="container main-contents" style="display:none">
+
+            <h1>Deeper Understanding</h1>
+            <p class="justify">
+                In this section I will discuss the extra components that I implemented in my website to
+                encompass the deeper understanding section of the assignment.
+            </p>
+
+            <h5>Blender</h5>
+            <p class="justify">I used Blender.</p>
+
+            <h5>Carousel</h5>
+            <p class="justify">I implemented a carosuel.</p>
+            
+            <h5>Modal System</h5>
+            <p class="justify">I implemented a modal pop-up system for displaying the models.</p>  
 
         </div>
 
@@ -334,10 +348,7 @@
 
                 <!-- Icons -->
                 <div class="navbar-text float-right social">
-                    <a href="#"><i class="fab fa-facebook-square fa-2x" style="font-size:20px;color:white;"></i></a>
-                    <a href="#"><i class="fab fa-twitter fa-2x" style="font-size:20px;color:white;"></i></a>
-                    <a href="#"><i class="fab fa-google-plus fa-2x" style="font-size:20px;color:white;"></i></a>
-                    <a href="#"><i class="fab fa-github-square fa-2x" style="font-size:20px;color:white;"></i></a>
+                    <a href="https://github.com/JellyMoonGames/3d-web-app"><i class="fab fa-github-square fa-2x" style="font-size:20px;color:white;"></i></a>
                 </div>
 
             </div>
@@ -350,7 +361,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script type="text/javascript" src="scripts/utils.js"></script>
-        <!--<script type="text/javascript" src="scripts/gallery-generator.js"></script>-->
         
     </body>
 

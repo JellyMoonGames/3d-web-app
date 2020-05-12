@@ -3,10 +3,20 @@
 // Swap to the requested element block and hide all others
 function changePage(page)
 {
+    // Start by hiding all of the pages
     $('#home').hide();
-    $('#model').hide();
+    $('#showcase').hide();
+    $('#understanding').hide();
 
+    // Hide the active status for all buttons
+    $('#nav-home').attr("class", "nav-link");
+    $('#nav-showcase').attr("class", "nav-link");
+    $('#nav-understanding').attr("class", "nav-link");
+
+    // Show the page given in the parameter
     $('#' + page).show();
+    // Show the active status for the page given in the parameter
+    $('#nav-' + page).attr("class", "nav-link active");
 }
 
 function updateModal(id)
@@ -38,7 +48,7 @@ function updateModal(id)
         imagePaths.forEach(function(element)
         {
             imageHTML += "<div class='col-sm-4'>"
-            imageHTML += "<img class='img-fluid' src='assets/images/gallery/" + element.toString() + "' alt='Image 1'></img>";
+            imageHTML += "<img class='img-fluid' src='assets/images/" + data[0]['modelTitle'] + "/" + element.toString() + "' alt='Image 1'></img>";
             imageHTML += "</div>"
         });
         
