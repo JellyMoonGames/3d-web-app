@@ -230,7 +230,7 @@
         <!-- 3D Model Modal Popup -->
         <div id="main-modal" class="modal fade">
                 
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
 
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -250,7 +250,7 @@
                         <div id="row-3d" class="row">
 
                             <!-- 3D Contents -->
-                            <div class="model3D">
+                            <div id="model3D">
                                 <x3d>
                                     <scene>
                                         <inline></inline>
@@ -265,48 +265,43 @@
                         <div id="row-interaction" class="row">
     
                             <!-- Camera View Button Column -->
-                            
-                                <div class="camera-controls">
-    
-                                    <h5>Camera View</h5>
-    
-                                    <div class="btn-group">
-                                        <a class="btn btn-responsive btn-warning" href="#">Front</a>
-                                        <a class="btn btn-responsive btn-warning" href="#">Back</a>
-                                        <a class="btn btn-responsive btn-warning" href="#">Left</a>
-                                        <a class="btn btn-responsive btn-warning" href="#">Right</a>
-                                    </div>
-    
+                            <div class="camera-controls">
+
+                                <h5>Camera View</h5>
+
+                                <div class="btn-group">
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="switchCamera('front')">Front</a>
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="switchCamera('back')">Back</a>
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="switchCamera('left')">Left</a>
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="switchCamera('right')">Right</a>
                                 </div>
+
+                            </div>
                             
 
                             <!-- Lights Button Column -->
-                            
-                                <div class="camera-controls">
-    
-                                    <h5>Lights</h5>
-    
-                                    <div class="btn-group">
-                                        <a class="btn btn-responsive btn-warning" href="#">On</a>
-                                        <a class="btn btn-responsive btn-warning" href="#">Off</a>
-                                    </div>
-    
+                            <div class="camera-controls">
+
+                                <h5>Lights</h5>
+
+                                <div class="btn-group">
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="toggleLights()">On / Off</a>
                                 </div>
+
+                            </div>
                             
 
                             <!-- Animation Button Column -->
-                            <div class="col-sm-12">
-                                <div class="camera-controls">
-    
-                                    <h5>Animations</h5>
-    
-                                    <div class="btn-group">
-                                        <a class="btn btn-responsive btn-warning" href="#">Anim-1</a>
-                                        <a class="btn btn-responsive btn-warning" href="#">Anim-2</a>
-                                        <a class="btn btn-responsive btn-warning" href="#">Anim-3</a>
-                                    </div>
-    
+                            <div class="camera-controls">
+
+                                <h5>Animations</h5>
+
+                                <div class="btn-group">
+                                    <a class="btn btn-responsive btn-warning" href="#">Anim-1</a>
+                                    <a class="btn btn-responsive btn-warning" href="#">Anim-2</a>
+                                    <a class="btn btn-responsive btn-warning" href="#">Anim-3</a>
                                 </div>
+
                             </div>
 
                         </div>

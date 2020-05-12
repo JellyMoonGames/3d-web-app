@@ -2,7 +2,7 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D version="3.0" profile="Immersive" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.0.xsd">
 	<head>
-		<meta name="filename" content="monkey_blue.x3d" />
+		<meta name="filename" content="monkey-texture.x3d" />
 		<meta name="generator" content="Blender 2.80 (sub 75)" />
 	</head>
 	<Scene>
@@ -16,7 +16,7 @@
 		            skyColor="0.051 0.051 0.051"
 		            />
 		<Transform DEF="Light_TRANSFORM"
-		           translation="-0.389603 1.693191 -5.227998"
+		           translation="-3.191999 4.663617 -3.623874"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="-0.498084 -0.762016 -0.413815 1.513875"
 		           >
@@ -40,12 +40,12 @@
 			           fieldOfView="0.691"
 			           />
 		</Transform>
-		<Transform DEF="Monkey_TRANSFORM"
+		<Transform DEF="Suzanne_TRANSFORM"
 		           translation="0.000000 0.000000 0.000000"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="0.000000 0.707107 0.707107 3.141593"
 		           >
-			<Transform DEF="Monkey_ifs_TRANSFORM"
+			<Transform DEF="Suzanne_ifs_TRANSFORM"
 			           translation="0.000000 0.000000 0.000000"
 			           scale="1.000000 1.000000 1.000000"
 			           rotation="0.000000 1.000000 0.000000 0.000000"
@@ -53,8 +53,17 @@
 				<Group DEF="group_ME_Suzanne">
 					<Shape>
 						<Appearance>
-							<Material DEF="MA_Material_001"
-							          diffuseColor="0.100 0.350 0.528"
+								<ImageTexture DEF="texture_001"
+									url="texture.jpg"
+								/>
+								<TextureTransform 
+									translation="0.000000 0.000000"
+									scale="1.000000 1.000000"
+									rotation="0.000000"
+								/>
+							
+							<Material DEF="MA_TextureMaterial"
+							          diffuseColor="0.800 0.800 0.800"
 							          specularColor="0.401 0.401 0.401"
 							          emissiveColor="0.000 0.000 0.000"
 							          ambientIntensity="0.000"
@@ -77,7 +86,7 @@
 			</Transform>
 		</Transform>
 		<Transform DEF="Light_001_TRANSFORM"
-		           translation="-4.211965 1.718724 1.125130"
+		           translation="-2.939041 5.014728 3.339457"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="-0.498084 -0.762016 -0.413815 1.513875"
 		           >
@@ -90,7 +99,7 @@
 			            />
 		</Transform>
 		<Transform DEF="Light_002_TRANSFORM"
-		           translation="-0.865378 2.386426 4.954401"
+		           translation="2.636379 5.480494 2.986714"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="-0.498084 -0.762016 -0.413815 1.513875"
 		           >
@@ -99,11 +108,11 @@
 			            color="1.0000 1.0000 1.0000"
 			            intensity="1.0000"
 			            radius="30.0000" 
-			            location="-0.0000 -0.0000 0.0000"
+			            location="0.0000 0.0000 0.0000"
 			            />
 		</Transform>
 		<Transform DEF="Light_003_TRANSFORM"
-		           translation="3.941606 2.640564 0.658323"
+		           translation="2.613649 5.073642 -3.445884"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="-0.498084 -0.762016 -0.413815 1.513875"
 		           >
@@ -116,7 +125,7 @@
 			            />
 		</Transform>
 		<Transform DEF="Light_004_TRANSFORM"
-		           translation="-0.166067 4.351308 0.068622"
+		           translation="-0.174779 -4.243490 0.210755"
 		           scale="1.000000 1.000000 1.000000"
 		           rotation="-0.498084 -0.762016 -0.413815 1.513875"
 		           >
@@ -125,7 +134,7 @@
 			            color="1.0000 1.0000 1.0000"
 			            intensity="1.0000"
 			            radius="30.0000" 
-			            location="0.0000 -0.0000 -0.0000"
+			            location="0.0000 0.0000 -0.0000"
 			            />
 		</Transform>
 	</Scene>
