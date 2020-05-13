@@ -5,7 +5,7 @@ $result = null;
 
 try
 {
-    $dsn = 'sqlite:../db/test1.db';
+    $dsn = 'sqlite:../db/main.db';
     $dbHandle = new PDO($dsn, 'user', 'password', array
     (
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -19,9 +19,7 @@ try
     while($data = $statement->fetch())
     {
         $result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
-        $result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
         $result[$i]['modelTitle'] = $data['modelTitle'];
-        $result[$i]['modelSubtitle'] = $data['modelSubtitle'];
         $result[$i]['modelDescription'] = $data['modelDescription'];
 
         $i++;

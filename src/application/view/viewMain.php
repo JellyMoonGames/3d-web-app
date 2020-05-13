@@ -89,17 +89,17 @@
 
                     <!-- Image 1 -->
                     <div class="carousel-item active">
-                        <img src="assets/images/banner_1.jpg" alt="Image 1">
+                        <img src="assets/images/carousel/1.jpg" alt="Image 1">
                     </div>
 
                     <!-- Image 2 -->
                     <div class="carousel-item">
-                        <img src="assets/images/banner_2.jpg" alt="Image 2">
+                        <img src="assets/images/carousel/2.jpg" alt="Image 2">
                     </div>
 
                     <!-- Image 3 -->
                     <div class="carousel-item">
-                        <img src="assets/images/banner_3.jpg" alt="Image 3">
+                        <img src="assets/images/carousel/3.jpg" alt="Image 3">
                     </div>
 
                 </div>
@@ -151,11 +151,11 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <a href="#">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery/3.jpg" alt="Image 3">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Fanta Bottle/3.jpg" alt="Image 3">
                         </a>
                         <div class="card-body">
-                            <h3 class="card-title">Model 3</h3>
-                            <p class="card-text">This is the description text for model 3.</p>
+                            <h3 class="card-title">Card 3</h3>
+                            <p class="card-text">This is the description text for card 3 which is currently a placeholder.</p>
                             <a class="btn btn-warning" href="#">View Model</a>
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
 
                             <?php } ?>
@@ -224,6 +224,7 @@
         <!-- Deeper Understanding Block Element-->
         <div id="understanding" class="container main-contents" style="display:none">
 
+            <br>
             <h1>Deeper Understanding</h1>
             <p class="justify">
                 In this section I will discuss the extra components that I implemented in my website to

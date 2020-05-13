@@ -6,7 +6,7 @@ class Model
 
     public function __construct()
     {
-        $dsn = 'sqlite:./db/test1.db';
+        $dsn = 'sqlite:./db/main.db';
 
         try
         {
@@ -18,7 +18,7 @@ class Model
         }
         catch(PDOEXception $e)
         {
-            echo "I'm sorry Daniel, I'm afraid I can't connect to the database!";
+            echo "I'm afraid I can't connect to the database!";
             print new Exception($e->getMessage());
         }
     }
@@ -28,9 +28,9 @@ class Model
         try
         {
             $this->dbHandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, x3dModelTitle TEXT,
-            x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
+            modelTitle TEXT, modelDescription TEXT)");
 
-            return "Model_3D table is successfully created inside test.db file";
+            return "Model_3D table is successfully created inside main.db file";
         }
         catch(PDOEXception $e)
         {
@@ -46,15 +46,17 @@ class Model
         {
             $this->dbHandle->exec
             (
-                "INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription)
-                    VALUES (1, 'string_1', 'string_2', 'string_3', 'string_4', 'string_5');" .
-                "INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription)
-                    VALUES (2, 'string_1', 'string_2', 'string_3', 'string_4', 'string_5');" .
-                "INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription)
-                    VALUES (3, 'string_1', 'string_2', 'string_3', 'string_4', 'string_5');"
+                "INSERT INTO Model_3D (Id, x3dModelTitle, modelTitle, modelDescription)
+                    VALUES (1, 'string_1', 'string_2', 'string_3');" .
+                "INSERT INTO Model_3D (Id, x3dModelTitle, modelTitle, modelDescription)
+                    VALUES (2, 'string_1', 'string_2', 'string_3');" .
+                "INSERT INTO Model_3D (Id, x3dModelTitle, modelTitle, modelDescription)
+                    VALUES (3, 'string_1', 'string_2', 'string_3');" .
+                "INSERT INTO Model_3D (Id, x3dModelTitle, modelTitle, modelDescription)
+                    VALUES (4, 'string_1', 'string_2', 'string_3');"
             );
 
-            return "X3D model data inserted successfully inside test1.db";
+            return "X3D model data inserted successfully inside main.db";
         }
         catch(PDOEXception $e)
         {
@@ -76,9 +78,7 @@ class Model
             while($data = $statement->fetch())
             {
                 $result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
-                $result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
                 $result[$i]['modelTitle'] = $data['modelTitle'];
-                $result[$i]['modelSubtitle'] = $data['modelSubtitle'];
                 $result[$i]['modelDescription'] = $data['modelDescription'];
 
                 $i++;
@@ -105,9 +105,7 @@ class Model
             while($data = $statement->fetch())
             {
                 $result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
-                $result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
                 $result[$i]['modelTitle'] = $data['modelTitle'];
-                $result[$i]['modelSubtitle'] = $data['modelSubtitle'];
                 $result[$i]['modelDescription'] = $data['modelDescription'];
 
                 $i++;
