@@ -186,6 +186,20 @@
 					</Shape>
 				</Group>
 			</Transform>
+
+				<!-- Animation -->
+				<TimeSensor DEF='RotationTimer' cycleInterval='4.0' loop='true' enabled='false'/>
+				<OrientationInterpolator DEF='Rotator'
+				key='0.0 0.33 0.66 1.0'
+				keyValue='1.0 1.0 1.0 0.0, 1.0 1.0 1.0 2.1, 1.0 1.0 1.0 4.2, 1.0 1.0 1.0 0.0'/>
+
 		</Transform>
+
+		<!-- Animation Routing -->
+		<ROUTE fromNode='RotationTimer' fromField='fraction_changed' 
+	   		toNode='Rotator' toField='set_fraction'/>
+		<ROUTE fromNode='Rotator' fromField='value_changed' 
+	   		toNode='Model_TRANSFORM' toField='set_rotation'/>
+
 	</Scene>
 </X3D>

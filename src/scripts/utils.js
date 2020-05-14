@@ -78,21 +78,49 @@ function toggleLights()
 {
     var value;
 
-    if($("#model__LA_Light").attr('intensity') == 0) value = 1;
+    if($('#model__LA_Light').attr('intensity') == 0) value = 1;
     else value = 0;
 
-    for(i = 0; i < 6; i++)
+    for(i = 0; i < 7; i++)
     {
-        if(i == 0) $("#model__LA_Light").attr('intensity', value);
-        else $("#model__LA_Light_00" + i).attr('intensity', value);
+        if(i == 0) $('#model__LA_Light').attr('intensity', value);
+        else $('#model__LA_Light_00' + i).attr('intensity', value);
     }
 }
 
 // Transitions the viewpoint depending on the parameter passed in
 function switchCamera(camera)
 {
-    if(camera == "front")       $("#model__CA_Camera").attr('set_bind', true);
-    else if(camera == "left")   $("#model__CA_Camera_001").attr('set_bind', true);
-    else if(camera == "back")   $("#model__CA_Camera_002").attr('set_bind', true);
-    else if(camera == "right")  $("#model__CA_Camera_003").attr('set_bind', true);
+    if($('#model__RotationTimer').attr('enabled') == 'true') return;
+
+    if(camera == "front")       $('#model__CA_Camera').attr('set_bind', true);
+    else if(camera == "left")   $('#model__CA_Camera_001').attr('set_bind', true);
+    else if(camera == "back")   $('#model__CA_Camera_002').attr('set_bind', true);
+    else if(camera == "right")  $('#model__CA_Camera_003').attr('set_bind', true);
+}
+
+function toggleAnimation()
+{
+    // Toggle the rotation timer on or off
+    if($('#model__RotationTimer').attr('enabled') == 'false')
+        $('#model__RotationTimer').attr('enabled', 'true');
+    else
+        $('#model__RotationTimer').attr('enabled', 'false');
+}
+
+function changeAnimationSpeed(amountToChange)
+{
+    // Calculate the new speed value
+    var currentAmount = parseFloat(($('#model__RotationTimer').attr('cycleInterval')));
+    var newAmount = parseFloat(currentAmount + amountToChange);
+
+    // Clamp the rotation speed between 1 and 10
+    if(newAmount < 1 || newAmount > 10) return;
+
+    var isEnabled = $('#model__RotationTimer').attr('enabled');
+
+    //  Disable then enable the rotation timer to apply the speed change
+    $('#model__RotationTimer').attr('enabled', 'false');
+    $('#model__RotationTimer').attr('cycleInterval', newAmount);
+    $('#model__RotationTimer').attr('enabled', isEnabled);
 }

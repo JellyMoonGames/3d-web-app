@@ -224,7 +224,6 @@
         <!-- Deeper Understanding Block Element-->
         <div id="understanding" class="container main-contents" style="display:none">
 
-            <br>
             <h1>Deeper Understanding</h1>
             <p class="justify">
                 In this section I will discuss the extra components that I implemented in my website to
@@ -312,21 +311,22 @@
                                 <h5>Animations</h5>
 
                                 <div class="btn-group">
-                                    <a class="btn btn-responsive btn-warning" href="#">Anim-1</a>
-                                    <a class="btn btn-responsive btn-warning" href="#">Anim-2</a>
-                                    <a class="btn btn-responsive btn-warning" href="#">Anim-3</a>
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="toggleAnimation()">Play / Stop</a>
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="changeAnimationSpeed(1)">- Speed</a>
+                                    <a class="btn btn-responsive btn-warning" href="#" onclick="changeAnimationSpeed(-1)">+ Speed</a>
                                 </div>
 
                             </div>
 
                         </div>
 
+                        <!-- Model Description -->
                         <div id="row-description" class="row">
-                            <p id=modalDescription>This model is an ancient ruin. This model is an ancient ruin. This model is an ancient ruin. This model is an ancient ruin. This model is an ancient ruin.</p>
+                            <p id=modalDescription></p>
                         </div>
 
+                        <!-- Model Images -->
                         <div id="row-image-gallery" class="row">
-
                         </div>
                         
                     </div>
