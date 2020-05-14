@@ -34,7 +34,7 @@ p
     color: white;
 }
 
-.carousel
+#home-carousel
 {
     border: 5px solid #0f0f0f;
     margin-top: 10px;
@@ -84,6 +84,14 @@ p
 .navbar-brand
 {
     font-family: 'Oswald', sans-serif;
+    font-size: 22pt;
+    margin-right: 22px;
+}
+
+.nav-link
+{
+    margin-right: 20px;
+    padding: 5px;
 }
 
 /* Default Font Colour */

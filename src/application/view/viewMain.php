@@ -47,17 +47,17 @@
 
                         <!-- Home Button -->
                         <li class="nav-item">
-                            <a id="nav-home" class="nav-link active" href="javascript:changePage('home')">Home</a>
+                            <a id="nav-home" class="nav-link active" href="javascript:changePage('home')">HOME</a>
                         </li>
 
                         <!-- Showcase Button -->
                         <li class="nav-item">
-                            <a id="nav-showcase" class="nav-link" href="javascript:changePage('showcase')">Showcase</a>
+                            <a id="nav-showcase" class="nav-link" href="javascript:changePage('showcase')">SHOWCASE</a>
                         </li>
 
                         <!-- Deeper Understanding Button -->
                         <li class="nav-item">
-                            <a id="nav-understanding" class="nav-link" href="javascript:changePage('understanding')">Deeper Understanding</a>
+                            <a id="nav-understanding" class="nav-link" href="javascript:changePage('understanding')">DEEPER UNDERSTANDING</a>
                         </li>
                         
                     </ul>
@@ -71,8 +71,12 @@
         <!-- Home Block Element-->
         <div id="home" class="container main-contents">
 
-            <h1>Home</h1>
-            <p>This is a showcase of a variety of low-poly 3D models that I have created.</p>
+            <br>
+            <h1>Welcome</h1>
+            <p>
+                This is a showcase of a variety of 3D models that have been created for viewing on the web and utilises technologies such as Bootstrap, JQuery, and X3DOM.
+                The website is responsive so it will automatically adjust the contents depending on the size of the screen that you are viewing it on.
+            </p>
 
             <!-- Carousel -->
             <div id="home-carousel" class="carousel slide" data-ride="carousel">
@@ -151,12 +155,12 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <a href="#">
-                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/Fanta Bottle/3.jpg" alt="Image 3">
+                            <img class="card-img-top img-fluid img-thumbnail" src="assets/images/github-logo.jpg" alt="Image 3">
                         </a>
                         <div class="card-body">
-                            <h3 class="card-title">Card 3</h3>
-                            <p class="card-text">This is the description text for card 3 which is currently a placeholder.</p>
-                            <a class="btn btn-warning" href="#">View Model</a>
+                            <h3 class="card-title">Github</h3>
+                            <p class="card-text">This is the website's GitHub repository, which contains all the source code.</p>
+                            <a class="btn btn-warning" href="https://github.com/JellyMoonGames/3d-web-app" target="_blank">View Repo</a>
                         </div>
                     </div>
                 </div>
@@ -168,6 +172,7 @@
         <!-- Gallery Element -->
         <div id="showcase" class="container main-contents" style="display:none">
 
+            <br>
             <h1>3D Model Showcase</h1>
             <p>This is a showcase of all my interactable, 3D models.</p>
             
@@ -224,6 +229,7 @@
         <!-- Deeper Understanding Block Element-->
         <div id="understanding" class="container main-contents" style="display:none">
 
+            <br>
             <h1>Deeper Understanding</h1>
             <p class="justify">
                 In this section I will discuss the extra components that I implemented in my website to
@@ -440,12 +446,12 @@
 
                 <!-- Copyright -->
                 <div class="navbar-text float-left copyright">
-                    <p><span class="align-baseline">&copy 2020 3D Web Applications</span></p>
+                    <p><span class="align-baseline">&copy 2020 3D Web Assignment</span></p>
                 </div>
 
                 <!-- Icons -->
                 <div class="navbar-text float-right social">
-                    <a href="https://github.com/JellyMoonGames/3d-web-app"><i class="fab fa-github-square fa-2x" style="font-size:20px;color:white;"></i></a>
+                    <a href="https://github.com/JellyMoonGames/3d-web-app" target="_blank"><i class="fab fa-github-square fa-2x" style="font-size:20px;color:white;"></i></a>
                 </div>
 
             </div>
