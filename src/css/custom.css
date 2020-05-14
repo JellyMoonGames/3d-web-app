@@ -6,12 +6,6 @@
 	src: url(../assets/fonts/open_sans/OpenSans-Regular.ttf);
 }
 
-@font-face
-{
-	font-family: Roboto;
-	src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
-}
-
 /* GENERAL --------------------------------------------------------------------- */
 
 html
